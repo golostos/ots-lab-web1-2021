@@ -1,3 +1,9 @@
+:root {
+    --black_alpha_16: rgba(13,25,43,0.16);
+    --black_alpha_40: rgba(16,23,34,0.4);
+    --btn-color: rgb(12, 115, 254);
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -26,6 +32,7 @@ header.header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 2rem;
 }
 
 .main-menu {
@@ -47,4 +54,84 @@ header.header {
 .main-menu a {
     text-decoration: none;
     color: white;
+}
+
+.order-section {
+    padding: 3rem;
+    text-align: center;
+    background: linear-gradient(#c2deff, white);
+}
+
+.card-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    width: 230px;
+    height: 290px;
+    box-shadow: 0 2px 20px var(--black_alpha_16);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+    background-color: white;
+    border-radius: 5px;
+    transition: box-shadow .5s;
+    /* justify-content: center; */
+    /* gap: 1rem; */
+}
+
+.card:hover {
+    box-shadow: 0 5px 35px var(--black_alpha_40);
+}
+
+.card img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.card-btn, .btn {    
+    border: 1px solid var(--btn-color);
+    border-radius: 5px;
+    color: var(--btn-color);
+    background-color: white;
+    width: 80%;
+    height: 2rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.card-btn:hover, .btn:hover {
+    background-color: var(--btn-color);
+    color: white;
+}
+
+.btn {
+    width: fit-content;
+    padding: 0 2rem;
+}
+
+section.position-ex {
+    position: relative;
+}
+
+.background {
+    height: 100vh;
+    background-image: url('1562069947_1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px) brightness(0.4);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+    color: white;
+    z-index: 1000;
 }
